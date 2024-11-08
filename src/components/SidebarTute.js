@@ -22,11 +22,11 @@ export const Example = () => {
 
 const Sidebar = () => {
     const links = [
-        { label: 'home', path: '/' , Icon: GoHome},
-        { label: 'about', path: '/about', Icon: GoPeople},
-        { label: 'events', path: '/events', Icon: GoCalendar},
-        { label: 'articles', path: '/articles', Icon: GoBook},
-        { label: 'contact', path:'/contact', Icon: GoRead},
+        { label: 'HOME', path: '/' , Icon: GoHome},
+        { label: 'ABOUT', path: '/about', Icon: GoPeople},
+        { label: 'EVENTS', path: '/events', Icon: GoCalendar},
+        { label: 'ARTICLES', path: '/articles', Icon: GoBook},
+        { label: 'CONTACT', path:'/contact', Icon: GoRead},
     ];
 
     const [open, setOpen] = useState(false);
@@ -53,7 +53,7 @@ const Sidebar = () => {
     return (
         <motion.nav
             layout
-            className=" sticky top-0 h-screen shrink-0 border-r border-slate-300 bg-white p-2"
+            className=" sticky top-0 h-screen shrink-0 border-r border-slate-300 bg-slate-950 p-2"
             style={{
                 width: open ? "225px" : "fit-content",
             }}
@@ -74,13 +74,13 @@ const Option = ({ Icon, title, selected, setSelected, open, notifs }) => {
         <motion.button
             layout
             onClick={() => setSelected(title)}
-            className={`relative flex h-10 w-full items-center rounded-md transition-colors ${selected === title ? "bg-indigo-100 text-indigo-800" : "text-slate-500 hover:bg-slate-100"}`}
+            className={`relative flex h-10 w-full items-center rounded-md transition-colors ${selected === title ? "bg-indigo-100 text-indigo-800" : "text-slate-200 hover:bg-gray-400 "}`}
         >
             <motion.div
                 layout
                 className="grid h-full w-10 place-content-center text-lg"
             >
-                <Icon />
+                <Icon color={`${selected == title?"black":"white"}`}/>
             </motion.div>
             {open && (
                 <motion.span
@@ -125,7 +125,7 @@ const TitleSection = ({ open }) => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.125 }}
                         >
-                            <span className="block text-l font-semibold">AION</span>
+                            <span className="block text-l font-semibold text-white">AION</span>
                         </motion.div>
                     )}
                 </div>
@@ -167,15 +167,15 @@ const ToggleClose = ({ open, setOpen }) => {
         <motion.button
             layout
             onClick={() => setOpen((val) => !val)}
-            className="absolute bottom-0 left-0 right-0 border-t border-slate-300 transition-colors hover:bg-slate-100"
+            className="absolute bottom-0 left-0 right-0 transition-colors hover:bg-slate-100"
         >
             <div className="flex items-center p-2">
                 <motion.div
                     layout
                     className="grid size-10 place-content-center text-lg"
                 >
-                    <GoTab 
-                        className={`transition-transform ${open && "rotate-180"}`}
+                    <GoTab color={"gray"} 
+                        className={`transition-transform hover:color-slate-500 ${open && "rotate-180"}`}
                     />
                 </motion.div>
                 {open && (
@@ -184,7 +184,7 @@ const ToggleClose = ({ open, setOpen }) => {
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.125 }}
-                        className="text-xs font-medium"
+                        className="text-xs font-medium text-gray-500"
                     >
                         Hide
                     </motion.span>

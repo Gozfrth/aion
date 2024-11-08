@@ -18,7 +18,7 @@ function App() {
                     <Sidebar />
                 </div>
             </IconContext.Provider>
-            <div className="absolute w-screen">
+            <div className="absolute w-full">
                 <Route path="/" exact>
                     <Home />
                 </Route>
