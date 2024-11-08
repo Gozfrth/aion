@@ -33,7 +33,7 @@ function Home() {
             </div>
 
             {/* Introduction Section */}
-            <section className="p-8 md:p-16 bg-slate-950 text-center">
+            <section className="p-8 md:p-16 bg-gray-950 text-center">
                 <h2 className="text-3xl md:text-5xl font-semibold text-gray-300">Empowering Students with AI & Machine Learning</h2>
                 <p className="mt-4 text-lg md:text-xl text-gray-300">
                     Join our community and explore the limitless possibilities of artificial intelligence and machine learning. Learn, collaborate, and create with us!
@@ -46,47 +46,12 @@ function Home() {
                     <h2 className="text-3xl md:text-4xl font-semibold text-gray-300 mb-8">Articles & Resources</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 drop-shadow-lg pt-20 pb-20">
                         <CardContainer/>
-                        {/* <div className="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 className="text-2xl font-semibold text-gray-800">Introduction to Machine Learning</h3>
-                            <p className="mt-2 text-gray-600">
-                                Learn the basics of machine learning, including key concepts, algorithms, and practical applications.
-                            </p>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 className="text-2xl font-semibold text-gray-800">Deep Learning with Neural Networks</h3>
-                            <p className="mt-2 text-gray-600">
-                                Dive into deep learning and neural networks, the backbone of many modern AI applications.
-                            </p>
-                        </div>
-                        <div className="bg-white p-6 rounded-lg shadow-lg">
-                            <h3 className="text-2xl font-semibold text-gray-800">AI Ethics & Society</h3>
-                            <p className="mt-2 text-gray-600">
-                                Explore the ethical implications of AI and the impact it has on society. Understand the importance of responsible AI.
-                            </p>
-                        </div> */}
+                        
                     </div>
                 </div>
             </section>
 
-            {/* Testimonials Section */}
-            {/* <section className="bg-white py-16">
-                <div className="max-w-6xl mx-auto px-8 text-center">
-                    <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-8">What Our Members Say</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
-                            <p className="text-gray-600 italic">"Joining the AI & ML Club helped me gain hands-on experience and deepen my understanding of AI. The workshops and projects have been amazing!"</p>
-                            <span className="block mt-4 font-bold text-gray-800">— Alex M., Computer Science Student</span>
-                        </div>
-                        <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
-                            <p className="text-gray-600 italic">"Being part of this community has sparked my interest in machine learning. The mentors and resources are top-notch!"</p>
-                            <span className="block mt-4 font-bold text-gray-800">— Priya S., Engineering Student</span>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-
-            {/* Call to Action Section */}
-            <section className="bg-blue-800 text-white py-16">
+            <section className="bg-blue-800 text-white py-16 pb-20">
                 <div className="max-w-6xl mx-auto px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-semibold">Ready to Start Your AI Journey?</h2>
                     <p className="mt-4 text-lg md:text-xl">

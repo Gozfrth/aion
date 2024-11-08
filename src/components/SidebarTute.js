@@ -11,52 +11,36 @@ import {
 import { motion } from "framer-motion";
 import Link from "./Link";
 
-export const Example = () => {
-    return (
-        <div className="flex bg-indigo-50">
-            <Sidebar />
-            <ExampleContent />
-        </div>
-    );
-};
-
 const Sidebar = () => {
     const links = [
-        { label: 'HOME', path: '/' , Icon: GoHome},
-        { label: 'ABOUT', path: '/about', Icon: GoPeople},
-        { label: 'EVENTS', path: '/events', Icon: GoCalendar},
-        { label: 'ARTICLES', path: '/articles', Icon: GoBook},
-        { label: 'CONTACT', path:'/contact', Icon: GoRead},
+        { label: 'HOME', path: '/', Icon: GoHome },
+        { label: 'ABOUT', path: '/about', Icon: GoPeople },
+        { label: 'EVENTS', path: '/events', Icon: GoCalendar },
+        { label: 'ARTICLES', path: '/articles', Icon: GoBook },
+        { label: 'CONTACT', path: '/contact', Icon: GoRead },
     ];
 
-    const [open, setOpen] = useState(false);
-    const [selected, setSelected] = useState("Home");
+    const [open, setOpen] = useState(true);
+    const [selected, setSelected] = useState("HOME");
 
-    const renderedLinks = links.map((link) => {
-        return (
-            <Link
-            key={link.label}
-            to={link.path}
-            >
+    const renderedLinks = links.map((link) => (
+        <Link key={link.label} to={link.path}>
             <Option
-                key={link.label}
                 Icon={link.Icon}
                 title={link.label}
                 selected={selected}
                 setSelected={setSelected}
                 open={open}
             />
-            </Link>
-        );
-    });
+        </Link>
+    ));
 
     return (
         <motion.nav
-            layout
-            className=" sticky top-0 h-screen shrink-0 border-r border-slate-300 bg-slate-950 p-2"
-            style={{
-                width: open ? "225px" : "fit-content",
-            }}
+            className="sticky top-0 h-screen shrink-0 border-r border-slate-300 bg-slate-950 p-2"
+            style={{ width: open ? "225px" : "fit-content" }}
+            onMouseEnter={() => setOpen(true)}
+            onMouseLeave={() => setOpen(false)}
         >
             <TitleSection open={open} />
 
@@ -175,7 +159,7 @@ const ToggleClose = ({ open, setOpen }) => {
                     className="grid size-10 place-content-center text-lg"
                 >
                     <GoTab color={"gray"} 
-                        className={`transition-transform hover:color-slate-500 ${open && "rotate-180"}`}
+                        className={`transition-transform ${open && "rotate-180"}`}
                     />
                 </motion.div>
                 {open && (
@@ -193,7 +177,5 @@ const ToggleClose = ({ open, setOpen }) => {
         </motion.button>
     );
 };
-
-const ExampleContent = () => <div className="h-[200vh] w-full"></div>;
 
 export default Sidebar;

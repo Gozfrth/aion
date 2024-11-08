@@ -54,13 +54,13 @@ function ContactUsPage() {
                     <input
                         type="text"
                         placeholder="First Name"
-                        className="border rounded-lg w-1/2 h-[60px] p-4"
+                        className="border rounded-lg w-1/2 h-[60px] p-4 bg-gray-200"
                     />
 
                     <input
                         type="text"
                         placeholder="Last Name"
-                        className="border rounded-lg w-1/2 h-[60px] p-4"
+                        className="border rounded-lg w-1/2 h-[60px] p-4 bg-gray-200"
                     />
                 </div>
 
@@ -68,14 +68,14 @@ function ContactUsPage() {
                     <input
                         type="email"
                         placeholder="Email"
-                        className="border rounded-lg w-full h-[60px] p-4"
+                        className="border rounded-lg w-full h-[60px] p-4 bg-gray-200"
                     />
                 </div>
 
                 <div className="w-2/3">
                     <textarea
                         placeholder="Send us queries/feedback"
-                        className="border rounded-lg w-full h-[160px] p-4"
+                        className="border rounded-lg w-full h-[160px] p-4 bg-gray-200"
                     />
                 </div>
 
