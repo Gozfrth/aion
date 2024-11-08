@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import CardContainer from "../components/CardContainer";
 // import Tutorial from "../components/Tutorial";
 
 function Home() {
@@ -40,11 +41,12 @@ function Home() {
             </section>
 
             {/* Articles Section */}
-            <section className="bg-slate-950 py-16">
-                <div className="max-w-6xl mx-auto px-8 text-center">
+            <section className="bg-slate-950 py-16 bg-gradient-to-b from-transparent to-blue-800">
+                <div className="max-w-6xl mx-auto px-8 text-center mt-20">
                     <h2 className="text-3xl md:text-4xl font-semibold text-gray-300 mb-8">Articles & Resources</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 drop-shadow-lg">
-                        <div className="bg-white p-6 rounded-lg shadow-lg">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 drop-shadow-lg pt-20 pb-20">
+                        <CardContainer/>
+                        {/* <div className="bg-white p-6 rounded-lg shadow-lg">
                             <h3 className="text-2xl font-semibold text-gray-800">Introduction to Machine Learning</h3>
                             <p className="mt-2 text-gray-600">
                                 Learn the basics of machine learning, including key concepts, algorithms, and practical applications.
@@ -61,7 +63,7 @@ function Home() {
                             <p className="mt-2 text-gray-600">
                                 Explore the ethical implications of AI and the impact it has on society. Understand the importance of responsible AI.
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
