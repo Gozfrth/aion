@@ -8,18 +8,6 @@ import {
     GoTab,
 } from "react-icons/go";
 
-import {
-    FiBarChart,
-    FiChevronDown,
-    FiChevronsRight,
-    FiDollarSign,
-    FiHome,
-    FiMonitor,
-    FiShoppingCart,
-    FiTag,
-    FiUsers,
-} from "react-icons/fi";
-
 import { motion } from "framer-motion";
 import Link from "./Link";
 
