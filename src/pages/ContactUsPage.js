@@ -1,25 +1,26 @@
-import { FaInstagram, FaTwitter, FaLinkedin, FaTelegram, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaLinkedin, FaTelegram, FaGithub } from "react-icons/fa";
 
 function ContactUsPage() {
     return (
         <div className="flex flex-col h-screen bg-slate-950 items-center">
             <h1 className="text-6xl mb-6 text-slate-200 mt-10">Contact Us</h1>
 
-
             <div className="flex space-x-6">
                 <a
                     href="https://www.instagram.com/aion.rit/profilecard/?igsh=aHU0NGxiOGE3dWY4YOUR_INSTAGRAM_LINK"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-110 hover:text-blue-500"
+                    aria-label="Instagram"
+                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-500"
                 >
                     <FaInstagram />
                 </a>
                 <a
-                    href="Yhttps://x.com/Aion_Rit?t=OcBT3RjN3yY6nmV10iI8Xw&s=08OUR_TWITTER_LINK"
+                    href="https://x.com/Aion_Rit?t=OcBT3RjN3yY6nmV10iI8Xw&s=08OUR_TWITTER_LINK"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-110 hover:text-blue-400"
+                    aria-label="Twitter"
+                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-400"
                 >
                     <FaTwitter />
                 </a>
@@ -27,7 +28,8 @@ function ContactUsPage() {
                     href="YOUR_LINKEDIN_LINK"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-110 hover:text-blue-700"
+                    aria-label="LinkedIn"
+                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-700"
                 >
                     <FaLinkedin />
                 </a>
@@ -35,7 +37,8 @@ function ContactUsPage() {
                     href="YOUR_TELEGRAM_LINK"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-110 hover:text-blue-600"
+                    aria-label="Telegram"
+                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-600"
                 >
                     <FaTelegram />
                 </a>
@@ -43,24 +46,28 @@ function ContactUsPage() {
                     href="YOUR_GITHUB_LINK"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-110 hover:text-blue-700"
+                    aria-label="GitHub"
+                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-700"
                 >
                     <FaGithub />
                 </a>
             </div>
-            <p className="text-lg m-10">Send us a message!</p>
+
+            <p className="text-white m-10">Send us a message!</p>
+
             <form className="flex flex-col items-center space-y-6 w-full">
                 <div className="flex w-2/3 space-x-6">
                     <input
                         type="text"
                         placeholder="First Name"
-                        className="border rounded-lg w-1/2 h-[60px] p-4 bg-gray-200"
+                        className="border rounded-lg w-1/2 h-[60px] p-4 bg-slate-200"
+                        required
                     />
-
                     <input
                         type="text"
                         placeholder="Last Name"
-                        className="border rounded-lg w-1/2 h-[60px] p-4 bg-gray-200"
+                        className="border rounded-lg w-1/2 h-[60px] p-4 bg-slate-200"
+                        required
                     />
                 </div>
 
@@ -68,14 +75,16 @@ function ContactUsPage() {
                     <input
                         type="email"
                         placeholder="Email"
-                        className="border rounded-lg w-full h-[60px] p-4 bg-gray-200"
+                        className="border rounded-lg w-full h-[60px] p-4 bg-slate-200"
+                        required
                     />
                 </div>
 
                 <div className="w-2/3">
                     <textarea
                         placeholder="Send us queries/feedback"
-                        className="border rounded-lg w-full h-[160px] p-4 bg-gray-200"
+                        className="border rounded-lg w-full h-[160px] p-4 bg-slate-200"
+                        required
                     />
                 </div>
 
