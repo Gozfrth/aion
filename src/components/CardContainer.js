@@ -3,9 +3,9 @@ import React from 'react';
 import Card from './Card';
 
 const cardData = [
-  { imgSrc: "https://picsum.photos/id/1/360/200", title: "Loki", description: "Loki challenges reality with time travel." },
-  { imgSrc: "https://picsum.photos/id/2/360/200", title: "Mulan", description: "Mulan: Courage, Honor, Warrior's Journey." },
-  { imgSrc: "https://picsum.photos/id/3/360/200", title: "The Falcon and the Winter Soldier", description: "Superheroes unite to battle villains." },
+  { imgSrc: "../../images/github.png", title: "dair-ai", description: "A collection of Machine Learning course/lecture notes." },
+  { imgSrc: "../../images/coursera.png", title: "AI and Machine Learning", description: "Andrew Ng dives into the basics of ML with this course" },
+  { imgSrc: "../../images/huggingface.png", title: "AI Cookbook", description: "A collection of notebooks illustrating practical aspects of building AI applications." },
 //   { imgSrc: "hotstar_clone_images/poster4.png", title: "Movie Name", description: "Lorem ipsum dolor sit amet consectetur." },
 //   { imgSrc: "hotstar_clone_images/poster5.png", title: "Movie Name", description: "Lorem ipsum dolor sit amet consectetur." },
 //   { imgSrc: "hotstar_clone_images/poster6.png", title: "Movie Name", description: "Lorem ipsum dolor sit amet consectetur." },

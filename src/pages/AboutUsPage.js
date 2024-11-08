@@ -5,13 +5,13 @@ function AboutUsPage() {
     return (
         <div className="text-gray-300 font-sans">
         <div className="flex overflow-hidden">
-            <div className="relative w-full h-[70vh] flex pl-40 bg-black bg-cover">
+            <div className="relative w-full h-[60vh] flex pl-40 bg-black bg-cover">
                 <div className="absolute bg-black opacity-40"></div>
 
                 <motion.h1
                     className="ml-[120px] absolute z-10 w-1/2 text-9xl font-bold text-white drop-shadow-lg"
-                    initial={{ y: 20 }}
-                    animate={{ y: 40 }}
+                    initial={{ y: 40 }}
+                    animate={{ y: 60 }}
                     transition={{ duration: 4, ease: "easeInOut" }}
                 >
                     ABOUT US

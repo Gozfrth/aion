@@ -7,7 +7,6 @@ const Card = ({ imgSrc, title, description }) => {
       <div className="pt-20 opacity-0 w-full h-full absolute top-0 left-0 z-10 bg-gradient-to-b from-transparent to-[#192133] p-2 transition-opacity duration-500 hover:opacity-100">
         <h2 className="text-white font-semibold">{title}</h2>
         <h6 className="text-gray-300 text-sm mt-2">{description}</h6>
-        <button className="mt-4 px-3 py-1 bg-white text-black text-xs font-semibold rounded">Add to Watchlist</button>
       </div>
     </div>
   );

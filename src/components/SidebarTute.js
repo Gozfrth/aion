@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { 
+import {
     GoHome,
     GoPeople,
     GoBook,
@@ -31,7 +31,7 @@ const Sidebar = () => {
     ];
 
     const [open, setOpen] = useState(false);
-    const [selected, setSelected] = useState("Home");
+    const [selected, setSelected] = useState("HOME");
 
     const renderedLinks = links.map((link) => {
         return (
@@ -53,9 +53,9 @@ const Sidebar = () => {
             layout
             className="sticky top-0 h-screen shrink-0 border-r border-slate-300 bg-slate-950 p-2"
             initial={{ width: "60px", opacity: 1 }}
-            animate={{ width: open ? "175px" : "56px", opacity: 1 }}
+            animate={{ width: open ? "180px" : "60px", opacity: 1 }}
             transition={{
-                duration: 0.4, 
+                duration: 0.4,
                 ease: "easeInOut",
             }}
             onMouseEnter={() => setOpen(true)}   // Expand sidebar on hover
@@ -113,18 +113,21 @@ const TitleSection = ({ open }) => {
     return (
         <div className="mb-3 border-b border-slate-300 pb-3">
             <div className="flex cursor-pointer items-center justify-between rounded-md transition-colors hover:bg-slate-700 hover:text-black">
-                <div className="flex items-center gap-2">
-                    <Logo />
-                    {open && (
-                        <motion.div
-                            initial={{ opacity: 0, y: 12 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.125 }}
-                        >
-                            <span className="block text-l font-semibold text-white">AION</span>
-                        </motion.div>
-                    )}
-                </div>
+
+                <Link to="/">
+                    <div className="flex items-center gap-2">
+                        <Logo />
+                        {open && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 12 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.125 }}
+                            >
+                                <span className="block text-l font-semibold text-white">AION</span>
+                            </motion.div>
+                        )}
+                    </div>
+                </Link>
             </div>
         </div>
     );
@@ -132,22 +135,11 @@ const TitleSection = ({ open }) => {
 
 const Logo = () => {
     return (
-        <div className="grid size-10 shrink-0 place-content-center rounded-md bg-indigo-600">
-            <svg
-                width="24"
-                height="auto"
-                viewBox="0 0 50 39"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="fill-slate-50"
-            >
-                <path
-                    d="M16.4992 2H37.5808L22.0816 24.9729H1L16.4992 2Z"
-                ></path>
-                <path
-                    d="M17.4224 27.102L11.4192 36H33.5008L49 13.0271H32.7024L23.2064 27.102H17.4224Z"
-                ></path>
-            </svg>
+        <div className="grid size-10 shrink-0 place-content-center rounded-md bg-white ">
+            <img
+                src="../../images/aion_logo_png.png"
+                className="scale-130 "
+            />
         </div>
     );
 };

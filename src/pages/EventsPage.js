@@ -31,20 +31,32 @@ function EventsPage() {
 
     return (
         <div className="text-gray-300 font-sans">
-            <div className="flex overflow-hidden">
-                <div className="relative w-full h-[60vh] flex pl-40 bg-black bg-cover">
-                    <div className="absolute bg-black opacity-40"></div>
-
+            <div className="relative w-full h-[70vh] flex bg-black bg-cover">
+                {/* Title Section */}
+                <div className="w-1/2 flex items-center justify-center pl-40 bg-black">
                     <motion.h1
-                        className="ml-[120px] absolute z-10 w-1/2 text-9xl font-bold text-white drop-shadow-lg"
-                        initial={{ y: 20 }}
-                        animate={{ y: 40 }}
+                        className="text-9xl font-bold text-white drop-shadow-lg"
+                        initial={{ y: -100 }}
+                        animate={{ y: -80 }}
                         transition={{ duration: 4, ease: "easeInOut" }}
                     >
                         UPCOMING EVENTS
                     </motion.h1>
                 </div>
+
+                {/* Video Section */}
+                <div className="w-1/2 relative h-full flex items-center justify-center p-40">
+                    {/* Background Video */}
+                    <img
+                        className="w-full h-full object-cover"
+                        src="../../videos/phineas.gif"
+                        autoPlay
+                        loop
+                        muted
+                    />
+                </div>
             </div>
+
 
             <section className="p-8 md:p-16 bg-gradient-to-b from-black to-gray-950 text-center">
                 <h2 className="text-3xl md:text-5xl font-semibold text-gray-300">
@@ -80,19 +92,18 @@ function EventsPage() {
                                 </div>
                                 <div className="mt-4">
                                     <button
-                                        className={`${
-                                            event.status === "Upcoming"
-                                                ? "bg-blue-600 hover:bg-blue-700"
-                                                : event.status === "In Progress"
+                                        className={`${event.status === "Upcoming"
+                                            ? "bg-blue-600 hover:bg-blue-700"
+                                            : event.status === "In Progress"
                                                 ? "bg-yellow-500 hover:bg-yellow-600"
                                                 : "bg-gray-500 hover:bg-gray-600"
-                                        } px-8 py-4 text-white font-semibold rounded-full transition duration-300`}
+                                            } px-8 py-4 text-white font-semibold rounded-full transition duration-300`}
                                     >
                                         {event.status === "Upcoming"
                                             ? "Register Now"
                                             : event.status === "In Progress"
-                                            ? "Join Event"
-                                            : "Event Completed"}
+                                                ? "Join Event"
+                                                : "Event Completed"}
                                     </button>
                                 </div>
                             </div>
