@@ -5,7 +5,6 @@ import ArticlesPage from "./pages/ArticlesPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import EventsPage from "./pages/EventsPage";
 import Home from "./pages/Home";
-import SideBarPage from "./pages/SideBarPage";
 
 import { IconContext } from "react-icons";
 

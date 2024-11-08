@@ -7,11 +7,11 @@ function Home() {
         <div className="text-gray-300 font-sans">
             {/* Hero Section */}
             <div className="flex justify-center overflow-hidden">
-                <div className="relative w-full h-[50vh] flex justify-center bg-black bg-cover bg-center">
+                <div className="relative w-full h-[50vh] flex justify-center bg-slate-950 bg-cover bg-center">
                     {/* Background Video */}
 
                     {/* Dark Overlay for readability */}
-                    <div className="absolute inset-0 bg-black opacity-40"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-black to-slate-950 opacity-40"></div>
 
                     {/* Title */}
                     <motion.h1
