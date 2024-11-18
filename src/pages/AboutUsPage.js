@@ -4,23 +4,22 @@ import { motion } from "framer-motion";
 function AboutUsPage() {
     return (
         <div className="text-gray-300 font-sans">
-        <div className="flex overflow-hidden">
-            <div className="relative w-full h-[60vh] flex pl-40 bg-black bg-cover">
-                <div className="absolute bg-black opacity-40"></div>
+            <div className="flex overflow-hidden">
+                <div className="relative w-full h-[60vh] flex pl-40 bg-black bg-cover">
+                    <div className="absolute inset-0 bg-black opacity-40"></div>
 
-                <motion.h1
-                    className="ml-[120px] absolute z-10 w-1/2 text-9xl font-bold text-white drop-shadow-lg"
-                    initial={{ y: 40 }}
-                    animate={{ y: 60 }}
-                    transition={{ duration: 4, ease: "easeInOut" }}
-                >
-                    ABOUT US
-                </motion.h1>
+                    <motion.h1
+                        className="right-10 top-16 absolute z-2 text-6xl md:text-[256px] font-bold text-white drop-shadow-lg"
+                        initial={{ y: 40 }}
+                        animate={{ y: 80 }}
+                        transition={{ duration: 4, ease: "easeInOut" }}
+                    >
+                        ABOUT US
+                    </motion.h1>
+                </div>
             </div>
-        </div>
 
-            {/* Introduction Section */}
-            <section className="flex flex-col md:flex-row items-center p-8 md:p-16 bg-slate-950 text-center md:text-left">
+            <section className="ml-8 flex flex-col md:flex-row items-center py-8 pl-8 pr-4 md:p-16 bg-slate-950 text-center md:text-left">
                 <div className="flex-1 p-4 md:pr-20">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Who We Are</h2>
                     <p className="text-lg md:text-xl text-gray-300">
@@ -31,13 +30,12 @@ function AboutUsPage() {
                         mentorship, and community-driven learning. We strive to inspire and equip students for their AI/ML journey.
                     </p>
                 </div>
-                <div className="flex-1 mt-8 md:mt-0 md:ml-8">
+                <div className=" flex-1 mt-8 md:mt-0 md:ml-8">
                     <img className="rounded-lg opacity-80 border" src="../../images/team_presenting.jpg" alt="AION Team Presenting" />
                 </div>
             </section>
 
-            {/* Vision Section */}
-            <section className="p-8 md:p-16 bg-gradient-to-b from-slate-950 to-slate-900 text-center">
+            <section className="ml-8 py-8 pl-8 pr-4 md:p-16 bg-gradient-to-b from-slate-950 to-slate-900 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Vision</h2>
                 <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
                     At AION, we envision a world where AI and ML are not just specialized fields but essential tools

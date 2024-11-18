@@ -21,53 +21,101 @@ export const Example = () => {
     );
 };
 
-const Sidebar = () => {
-    const links = [
-        { label: 'HOME', path: '/', Icon: GoHome },
-        { label: 'ABOUT', path: '/about', Icon: GoPeople },
-        { label: 'EVENTS', path: '/events', Icon: GoCalendar },
-        { label: 'ARTICLES', path: '/articles', Icon: GoBook },
-        { label: 'CONTACT', path: '/contact', Icon: GoRead },
-    ];
-
+const Sidebar = (mobile) => {
     const [open, setOpen] = useState(false);
     const [selected, setSelected] = useState("HOME");
 
-    const renderedLinks = links.map((link) => {
+    if (mobile) {
+        const links = [
+            { label: 'HOME', path: '/', Icon: GoHome },
+            { label: 'ABOUT', path: '/about', Icon: GoPeople },
+            { label: 'EVENTS', path: '/events', Icon: GoCalendar },
+            { label: 'ARTICLES', path: '/articles', Icon: GoBook },
+            { label: 'CONTACT', path: '/contact', Icon: GoRead },
+        ];
+
+        const renderedLinks = links.map((link) => {
+            return (
+                <Link key={link.label} to={link.path}>
+                    <Option
+                        Icon={link.Icon}
+                        title={link.label}
+                        selected={selected}
+                        setSelected={setSelected}
+                        open={open}
+                        setOpen={setOpen} // Pass setOpen to Option
+                    />
+                </Link>
+            );
+        });
+
         return (
-            <Link key={link.label} to={link.path}>
-                <Option
-                    Icon={link.Icon}
-                    title={link.label}
-                    selected={selected}
-                    setSelected={setSelected}
-                    open={open}
-                    setOpen={setOpen} // Pass setOpen to Option
-                />
-            </Link>
+            <motion.nav
+                layout
+                className="sticky top-0 h-screen shrink-0 border-r border-slate-300 bg-slate-950 p-2"
+                initial={{ width: "60px", opacity: 1 }}
+                animate={{ width: open ? "180px" : "60px", opacity: 1 }}
+                transition={{
+                    duration: 0.4,
+                    ease: "easeInOut",
+                }}
+                onMouseEnter={() => setOpen(true)}   // Expand sidebar on hover
+                onMouseLeave={() => setOpen(false)}  // Collapse sidebar when mouse leaves
+            >
+                <TitleSection open={open} />
+
+                <div className="space-y-2">
+                    {renderedLinks}
+                </div>
+            </motion.nav>
         );
-    });
+    }
+    else {
+        const links = [
+            { label: 'HOME', path: '/', Icon: GoHome },
+            { label: 'ABOUT', path: '/about', Icon: GoPeople },
+            { label: 'EVENTS', path: '/events', Icon: GoCalendar },
+            { label: 'ARTICLES', path: '/articles', Icon: GoBook },
+            { label: 'CONTACT', path: '/contact', Icon: GoRead },
+        ];
 
-    return (
-        <motion.nav
-            layout
-            className="sticky top-0 h-screen shrink-0 border-r border-slate-300 bg-slate-950 p-2"
-            initial={{ width: "60px", opacity: 1 }}
-            animate={{ width: open ? "180px" : "60px", opacity: 1 }}
-            transition={{
-                duration: 0.4,
-                ease: "easeInOut",
-            }}
-            onMouseEnter={() => setOpen(true)}   // Expand sidebar on hover
-            onMouseLeave={() => setOpen(false)}  // Collapse sidebar when mouse leaves
-        >
-            <TitleSection open={open} />
+        const renderedLinks = links.map((link) => {
+            return (
+                <Link key={link.label} to={link.path}>
+                    <Option
+                        Icon={link.Icon}
+                        title={link.label}
+                        selected={selected}
+                        setSelected={setSelected}
+                        open={open}
+                        setOpen={setOpen} // Pass setOpen to Option
+                    />
+                </Link>
+            );
+        });
 
-            <div className="space-y-2">
-                {renderedLinks}
-            </div>
-        </motion.nav>
-    );
+        return (
+            <motion.nav
+                layout
+                className="top-0 h-screen border-r border-slate-300 bg-slate-950 p-2"
+                initial={{ width: "0px", opacity: 0 }}
+                animate={{ width: open ? "180px" : "0px", opacity: open ? 1 : 0 }}
+                transition={{
+                    duration: 0.4,
+                    ease: "easeInOut",
+                }}
+                onMouseEnter={() => setOpen(true)}   // Expand sidebar on hover
+                onMouseLeave={() => setOpen(false)}  // Collapse sidebar when mouse leaves
+                onClick={() => setOpen(true)}       // Toggle sidebar on click
+            >
+                <TitleSection open={open} />
+
+                <div className="space-y-2">
+                    {renderedLinks}
+                </div>
+            </motion.nav>
+        );
+    }
 };
 
 const Option = ({ Icon, title, selected, setSelected, open, setOpen, notifs }) => {

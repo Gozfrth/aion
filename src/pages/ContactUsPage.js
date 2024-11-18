@@ -11,7 +11,7 @@ function ContactUsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-500"
+                    className="text-xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-500"
                 >
                     <FaInstagram />
                 </a>
@@ -20,7 +20,7 @@ function ContactUsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Twitter"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-400"
+                    className="text-xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-400"
                 >
                     <FaTwitter />
                 </a>
@@ -29,7 +29,7 @@ function ContactUsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-700"
+                    className="text-xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-700"
                 >
                     <FaLinkedin />
                 </a>
@@ -38,7 +38,7 @@ function ContactUsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Telegram"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-600"
+                    className="text-xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-600"
                 >
                     <FaTelegram />
                 </a>
@@ -47,7 +47,7 @@ function ContactUsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
-                    className="text-3xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-700"
+                    className="text-xl transition-transform transform text-slate-200 hover:scale-125 hover:text-blue-700"
                 >
                     <FaGithub />
                 </a>
@@ -55,8 +55,8 @@ function ContactUsPage() {
 
             <p className="text-white m-10">Send us a message!</p>
 
-            <form className="flex flex-col items-center space-y-6 w-full">
-                <div className="flex w-2/3 space-x-6">
+            <form className="flex flex-col items-center space-y-6 w-2/3">
+                <div className="flex w-full space-x-4">
                     <input
                         type="text"
                         placeholder="First Name"
@@ -71,7 +71,7 @@ function ContactUsPage() {
                     />
                 </div>
 
-                <div className="w-2/3">
+                <div className="w-full">
                     <input
                         type="email"
                         placeholder="Email"
@@ -80,7 +80,7 @@ function ContactUsPage() {
                     />
                 </div>
 
-                <div className="w-2/3">
+                <div className="w-full">
                     <textarea
                         placeholder="Send us queries/feedback"
                         className="border rounded-lg w-full h-[160px] p-4 bg-slate-200"
